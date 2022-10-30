@@ -9,6 +9,8 @@ import customertimes from '../public/customertimes.jpg'
 import Roadmap from './sections/Roadmap';
 import AboutMe from './sections/AboutMe';
 import { collegeBlock, pcsaBlock, pcssaBlock, nodeBlock } from './data/textBlocks';
+import Form from './components/Form';
+
 
 
 export default function Home() {
@@ -46,6 +48,21 @@ export default function Home() {
     }
   }]
 
+  const formFields = [{
+    id: 'name',
+    label: 'Your name',
+    type: 'text'
+  }, {
+    id: 'email',
+    label: 'E-mail to write back',
+    type: 'email'
+  }, {
+    id: 'question',
+    label: 'Your question',
+    type: 'text'
+  }
+  ]
+
   return (
     <div>
       <Head>
@@ -56,6 +73,7 @@ export default function Home() {
       <main className='bg-white px-10'>
         <AboutMe />
         <Roadmap header="Experience Roadmap" elements={roadmapElements}/>
+        <Form formHeader="Ask me a question" formFields={formFields} action="Submit"/>
       </main>
     </div>
   );

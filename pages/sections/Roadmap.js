@@ -19,7 +19,7 @@ const Roadmap = ({ header, elements }) => {
     return (
         <section>
             <h1 className='text-center font-sans font-medium text-2xl py-1'>{header}</h1>
-            <div className='text-3xl flex justify-center gap-16 py-16 text-gray-600'>
+            <div className='text-3xl flex justify-center gap-16 py-6 text-gray-600'>
                 {elements.map(item => (
                     <button 
                     key={item.name} 
